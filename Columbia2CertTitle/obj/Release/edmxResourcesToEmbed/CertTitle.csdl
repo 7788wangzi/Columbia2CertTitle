@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CertTitleModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CertTitleEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ExamEntries" EntityType="CertTitleModel.ExamEntry" />
+    <EntitySet Name="IssueEntries" EntityType="CertTitleModel.IssueEntry" />
+    <EntitySet Name="SiteUsers" EntityType="CertTitleModel.SiteUser" />
+    <AssociationSet Name="FK_IssueEntry_ExamEntry" Association="CertTitleModel.FK_IssueEntry_ExamEntry">
+      <End Role="ExamEntry" EntitySet="ExamEntries" />
+      <End Role="IssueEntry" EntitySet="IssueEntries" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ExamEntry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ExamID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Version" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Language" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PjM" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CDM" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PlanFinishDate" Type="DateTime" Precision="3" />
+    <Property Name="ActualFinishDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IssueCount" Type="Int32" />
+    <Property Name="IssueCountToEDP" Type="Int32" />
+    <NavigationProperty Name="IssueEntries" Relationship="CertTitleModel.FK_IssueEntry_ExamEntry" FromRole="ExamEntry" ToRole="IssueEntry" />
+  </EntityType>
+  <EntityType Name="IssueEntry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ExamEntry_ID" Type="Int32" />
+    <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="ExamEntry" Relationship="CertTitleModel.FK_IssueEntry_ExamEntry" FromRole="IssueEntry" ToRole="ExamEntry" />
+  </EntityType>
+  <EntityType Name="SiteUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Alias" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_IssueEntry_ExamEntry">
+    <End Role="ExamEntry" Type="CertTitleModel.ExamEntry" Multiplicity="0..1" />
+    <End Role="IssueEntry" Type="CertTitleModel.IssueEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExamEntry">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IssueEntry">
+        <PropertyRef Name="ExamEntry_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

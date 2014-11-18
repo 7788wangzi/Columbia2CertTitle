@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CertTitleModelStoreContainer" CdmEntityContainer="CertTitleEntities">
+    <EntitySetMapping Name="ExamEntries">
+      <EntityTypeMapping TypeName="CertTitleModel.ExamEntry">
+        <MappingFragment StoreEntitySet="ExamEntry">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="PjM" ColumnName="PjM" />
+          <ScalarProperty Name="CDM" ColumnName="CDM" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="PlanFinishDate" ColumnName="PlanFinishDate" />
+          <ScalarProperty Name="ActualFinishDate" ColumnName="ActualFinishDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IssueCount" ColumnName="IssueCount" />
+          <ScalarProperty Name="IssueCountToEDP" ColumnName="IssueCountToEDP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssueEntries">
+      <EntityTypeMapping TypeName="CertTitleModel.IssueEntry">
+        <MappingFragment StoreEntitySet="IssueEntry">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExamEntry_ID" ColumnName="ExamEntry_ID" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteUsers">
+      <EntityTypeMapping TypeName="CertTitleModel.SiteUser">
+        <MappingFragment StoreEntitySet="SiteUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

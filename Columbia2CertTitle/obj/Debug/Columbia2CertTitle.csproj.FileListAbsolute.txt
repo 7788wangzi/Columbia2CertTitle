@@ -1,0 +1,10 @@
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\Columbia2CertTitle.exe.config
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\Columbia2CertTitle.exe
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\Columbia2CertTitle.pdb
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\obj\Debug\Columbia2CertTitle.exe
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\obj\Debug\Columbia2CertTitle.pdb
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\EntityFramework.dll
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\EntityFramework.xml
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\Microsoft.TeamFoundation.WorkItemTracking.Client.DataStoreLoader.dll
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Debug\Microsoft.WITDataStore.dll

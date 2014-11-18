@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CertTitleModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CertTitleModelStoreContainer">
+    <EntitySet Name="ExamEntry" EntityType="CertTitleModel.Store.ExamEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IssueEntry" EntityType="CertTitleModel.Store.IssueEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteUser" EntityType="CertTitleModel.Store.SiteUser" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_IssueEntry_ExamEntry" Association="CertTitleModel.Store.FK_IssueEntry_ExamEntry">
+      <End Role="ExamEntry" EntitySet="ExamEntry" />
+      <End Role="IssueEntry" EntitySet="IssueEntry" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ExamEntry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExamID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Version" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Language" Type="varchar" MaxLength="50" />
+    <Property Name="PjM" Type="varchar" MaxLength="50" />
+    <Property Name="CDM" Type="varchar" MaxLength="50" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="50" />
+    <Property Name="PlanFinishDate" Type="datetime" />
+    <Property Name="ActualFinishDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="IssueCount" Type="int" />
+    <Property Name="IssueCountToEDP" Type="int" />
+  </EntityType>
+  <EntityType Name="IssueEntry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExamEntry_ID" Type="int" />
+    <Property Name="Details" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="SiteUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Alias" Type="varchar" MaxLength="50" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_IssueEntry_ExamEntry">
+    <End Role="ExamEntry" Type="CertTitleModel.Store.ExamEntry" Multiplicity="0..1" />
+    <End Role="IssueEntry" Type="CertTitleModel.Store.IssueEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExamEntry">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IssueEntry">
+        <PropertyRef Name="ExamEntry_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

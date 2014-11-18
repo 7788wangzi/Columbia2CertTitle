@@ -1,0 +1,13 @@
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Columbia2CertTitle.exe.config
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Columbia2CertTitle.exe.manifest
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Columbia2CertTitle.application
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Columbia2CertTitle.exe
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Columbia2CertTitle.pdb
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\EntityFramework.dll
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Microsoft.TeamFoundation.WorkItemTracking.Client.DataStoreLoader.dll
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\EntityFramework.xml
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\bin\Release\Microsoft.WITDataStore.dll
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\obj\Release\Columbia2CertTitle.exe.manifest
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\obj\Release\Columbia2CertTitle.application
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\obj\Release\Columbia2CertTitle.exe
+C:\Users\v-qixue\Documents\Visual Studio 2012\Projects\Columbia2CertTitle\Columbia2CertTitle\obj\Release\Columbia2CertTitle.pdb
